@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@color/cardview_light_background"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="1dp"
+        card_view:cardPreventCornerOverlap="true"
+        card_view:cardUseCompatPadding="true"
+        card_view:contentPaddingTop="8dp"
+        card_view:contentPaddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/additive_name"
+                style="@style/AdditiveItemStyle"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:maxLines="2"
+                android:textStyle="bold"
+                tools:text="Herpes"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="8sp" />
+
+            <TextView
+                android:id="@+id/additive_code"
+                style="@style/AdditiveItemStyle"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:textStyle="italic"
+                tools:text="12345"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="8sp" />
+
+            <TextView
+                android:id="@+id/additive_desc"
+                style="@style/AdditiveItemStyle"
+                android:layout_weight="5"
+                android:maxLines="4"
+                android:layout_gravity="center_vertical"
+                tools:text="This additive can cause disease1 and disease2! It is extremely dangerous! Beware!"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="8sp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</FrameLayout>

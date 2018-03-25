@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AdditiveInfo</string>
+    <string name="code_usa">Code (USA)</string>
+    <string name="code_eu">Code (EU)</string>
+    <string name="code_china">Code (CHINA)</string>
+    <string name="name">Name</string>
+    <string name="details">Details</string>
+    <string name="additive_info">Additive Info</string>
+    <string name="error">Error</string>
+</resources>

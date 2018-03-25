@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.additiveinfo.AdditiveActivity"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/additive_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Ammonium lactate" />
+
+    <TextView
+        android:id="@+id/label_usa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="USA"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/label_eu"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/additive_name" />
+
+    <TextView
+        android:id="@+id/label_eu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EU"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/label_china"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/label_usa"
+        app:layout_constraintTop_toTopOf="@+id/label_usa" />
+
+    <TextView
+        android:id="@+id/label_china"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHINA"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/label_eu"
+        app:layout_constraintTop_toTopOf="@+id/label_eu" />
+
+    <TextView
+        android:id="@+id/code_usa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/label_usa"
+        app:layout_constraintStart_toStartOf="@+id/label_usa"
+        app:layout_constraintTop_toBottomOf="@+id/label_usa"
+        tools:text="414" />
+
+    <TextView
+        android:id="@+id/code_eu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/label_eu"
+        app:layout_constraintStart_toStartOf="@+id/label_eu"
+        app:layout_constraintTop_toBottomOf="@+id/label_eu"
+        tools:text="56435" />
+
+    <TextView
+        android:id="@+id/code_china"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/label_china"
+        app:layout_constraintStart_toStartOf="@+id/label_china"
+        app:layout_constraintTop_toBottomOf="@+id/label_china"
+        tools:text="35355" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/code_usa"
+        tools:text="This additive can cause diabetes and disease2! It is extremely dangerous! Beware! This additive can cause diabetes and disease2! It is extremely dangerous! Beware! This additive can cause diabetes and disease2! It is extremely dangerous! Beware!" />
+</android.support.constraint.ConstraintLayout>
