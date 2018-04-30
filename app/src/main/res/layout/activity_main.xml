@@ -7,19 +7,6 @@
     android:padding="8dp"
     tools:context="com.example.android.additiveinfo.MainActivity">
 
-    <TextView
-        android:id="@+id/title_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="@string/additive_info"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_additive"
         android:layout_width="0dp"
@@ -28,7 +15,7 @@
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_titles"
+        app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/item_additive">
 
 
@@ -40,91 +27,118 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/code_select_text"
         app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
             android:id="@+id/radio_usa"
             android:text="USA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="8dp"
-            android:paddingEnd="16dp"
+            style="@style/codeRadioBtnStyle"
+            android:checked="true"
             />
 
         <RadioButton
             android:id="@+id/radio_eu"
             android:text="EU"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="8dp"
-            android:paddingEnd="16dp" />
+            style="@style/codeRadioBtnStyle"
+            />
 
         <RadioButton
             android:id="@+id/radio_china"
             android:text="China"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="8dp"
-            android:paddingEnd="16dp" />
+            style="@style/codeRadioBtnStyle"
+            />
+
     </RadioGroup>
 
-    <LinearLayout
-        android:id="@+id/layout_titles"
-        android:layout_width="0dp"
+    <!--<LinearLayout-->
+        <!--android:id="@+id/layout_titles"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingBottom="8dp"-->
+        <!--android:paddingTop="8dp"-->
+        <!--android:elevation="8dp"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--tools:targetApi="lollipop">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/additive_name_title"-->
+            <!--style="@style/AdditiveItemStyle"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_weight="3"-->
+            <!--android:paddingEnd="6dp"-->
+            <!--android:paddingStart="8dp"-->
+            <!--android:text="@string/name"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:textSize="24sp"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/additive_code_title"-->
+            <!--style="@style/AdditiveItemStyle"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:gravity="center"-->
+            <!--android:maxLines="2"-->
+            <!--android:text="@string/code_usa"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:textSize="12sp"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/additive_desc_title"-->
+            <!--style="@style/AdditiveItemStyle"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_weight="5"-->
+            <!--android:paddingEnd="32dp"-->
+            <!--android:paddingStart="32dp"-->
+            <!--android:text="@string/details"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:textSize="24sp"-->
+            <!--android:textStyle="bold" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <TextView
+        android:id="@+id/code_select_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorPrimary"
-        android:orientation="horizontal"
-        android:paddingBottom="16dp"
-        android:paddingTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_text">
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/select_country_code"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup" />
 
-        <TextView
-            android:id="@+id/additive_name_title"
-            style="@style/AdditiveItemStyle"
-            android:layout_height="match_parent"
-            android:layout_gravity="bottom"
-            android:layout_weight="3"
-            android:autoSizeMinTextSize="8sp"
-            android:autoSizeTextType="uniform"
-            android:paddingEnd="6dp"
-            android:paddingStart="8dp"
-            android:text="@string/name"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/favView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@id/fav_text"
+        app:layout_constraintEnd_toEndOf="@+id/fav_text"
+        app:layout_constraintStart_toStartOf="@+id/fav_text"
+        android:alpha=".2"
+        app:srcCompat="@android:drawable/btn_star" />
 
-        <TextView
-            android:id="@+id/additive_code_title"
-            style="@style/AdditiveItemStyle"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:autoSizeMinTextSize="8sp"
-            android:autoSizeTextType="uniform"
-            android:maxLines="2"
-            android:text="@string/code_usa"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/additive_desc_title"
-            style="@style/AdditiveItemStyle"
-            android:layout_height="match_parent"
-            android:layout_gravity="bottom"
-            android:layout_weight="5"
-            android:autoSizeMinTextSize="8sp"
-            android:autoSizeTextType="uniform"
-            android:paddingEnd="32dp"
-            android:paddingStart="32dp"
-            android:text="@string/details"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/fav_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/favorites"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
